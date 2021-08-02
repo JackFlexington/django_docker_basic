@@ -17,12 +17,7 @@ RUN apt install -y python3-pip; echo "\n\n\n==========="; echo "INSTALLED python
 RUN apt install -y vim; echo "\n\n\n==========="; echo "INSTALLED vim"; echo "===========\n\n\n"; 
 RUN apt install -y git; echo "\n\n\n==========="; echo "INSTALLED git"; echo "===========\n\n\n"; 
 
-# Update system (again)
-RUN apt update -y; echo "\n\n\n============"; echo "Updated system again"; echo "==========\n\n\n";
-RUN apt upgrade -y; echo "\n\n\n============"; echo "Upgraded system again"; echo "==========\n\n\n";
-
 # Build application code directory
-RUN mkdir /home/django/
 WORKDIR /home/django/
 RUN mkdir ./scripts/
 
@@ -35,4 +30,3 @@ ADD ./scripts/ /home/django/scripts/
 
 # Add our application (if appropriate)
 # ADD . /code/
-~               
